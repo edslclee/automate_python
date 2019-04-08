@@ -1,4 +1,5 @@
-local directory and file을 github로 올렸다 내리는 방법
+local directory and file을 github로 올리는방법
+
 
 1. Github에서 repository 생성
    automate_python : public
@@ -7,8 +8,41 @@ local directory and file을 github로 올렸다 내리는 방법
    2) directory 오른쪽 click gitbash here선택
 3, git init명령어 입력
 4. git remote add origin https://github.com/edslclee/automate_python.git
-5. git pull origin master
+5. 해당 디렉토리에서 작업
+6. git bash here로 CLI연결
+7. git status
+8. git add .
+9. git commit -m "first commit"
+10. git push origin +master
+   
+git commit 을 하는 단계에서 
+아래와같은 에러메세지가 나오실때 해결 방법입니다 !
+
+Please tell me who you are .Run  
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name" to set your account's default identity.
+
+해당 에러 메세지는 
+" 그래 이제 너가 설정해놓은 repository에 commit을 할껀데 
+그전에, 너는 누구야 ? " 를 묻는건데요,
+
+에러 메세지에서 말해주는대로 
+$ git config --global user.name "user name"
+$ git config --global user.email "user e-mail" 을 적어주시면 됩니다 :)
+
+
+
+   git pull origin master
    git status
    git add . 
    git commit -m "message"
    git push origin +master
+
+남이 만든 github를 가져오는 방법
+1. 연동할 directory를 생성
+2. git bash here를 이용
+3. git init
+4. git remote add origin Clone한 directory
+5. git pull origin +master
+
+
